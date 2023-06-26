@@ -4,7 +4,10 @@ import Form from "./Form";
 import Section from "./Section";
 function App() {
   const [inputs, setNewInput] = useState([]);
-
+  const [inputValidation, setInputValidation] = useState(true);
+  const handelWrongInput = (values) => {
+    setInputValidation(values);
+  };
   const formSubmit = (updatedInputs) => {
     console.log(updatedInputs);
     setNewInput((oldInputs) => {
@@ -36,11 +39,27 @@ function App() {
     );
   }
 
-  return (
+  return inputValidation ? (
     <>
-      <Form onSubmitHandeler={formSubmit} />
+      <Form
+        onSubmitHandeler={formSubmit}
+        onWrongInputHandeler={handelWrongInput}
+      />
       {displayContent}
     </>
+  ) : (
+    <div className="wrong-age-container wrong-input">
+      <div className="wrong-input-items">
+        <h2>Age Must be above 18</h2>
+        <button
+          onClick={() => {
+            setInputValidation(true);
+          }}
+        >
+          Ok
+        </button>
+      </div>
+    </div>
   );
 }
 

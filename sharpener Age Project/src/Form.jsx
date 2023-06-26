@@ -14,12 +14,13 @@ const Form = (props) => {
     setPersonAge(e.target.value);
   };
 
-  // if the input fields are wrong
-  let wrongInput = false;
   const submitFormHandeler = (e) => {
     e.preventDefault();
     if (personName.trim() === "" || personAge.trim() === "") {
-      wrongInput = true;
+      alert("input Field can't be empty");
+      return;
+    } else if (personAge < 18) {
+      props.onWrongInputHandeler(false);
       return;
     }
     const submitDetails = {
@@ -31,6 +32,8 @@ const Form = (props) => {
     setPersonName("");
     setPersonAge("");
   };
+
+  // if the input fields are wrong
 
   return (
     <div className="conatiner">
@@ -51,11 +54,6 @@ const Form = (props) => {
         />
         <button type="submit">Submit</button>
       </form>
-
-      <div className="wrong-age-container wrong-input">
-        <h2>Age Must be above 18</h2>
-        <button>Ok</button>
-      </div>
     </div>
   );
 };

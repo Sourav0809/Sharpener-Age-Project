@@ -28,3 +28,26 @@
     font-weight: bold;
     padding: 20px;
 }
+
+.wrong-age-container {
+    position: relative;
+    top: 100px;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+    background-color: rgba(9, 7, 7, 0.988);
+    color: white;
+}
+
+.wrong-age-container .wrong-input-items {
+    padding: 10px;
+}
+
+.wrong-age-container .wrong-input-items button {
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
