@@ -1,0 +1,30 @@
+.conatiner {
+  background-color: rgb(16, 16, 70);
+  color: white;
+  width: 600px;
+  margin: auto;
+}
+
+.main-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.main-form button {
+  padding: 5px;
+}
+
+.form-input {
+  padding: 8px;
+}
+
+.wrong-age-container {
+  display: none;
+  position: absolute;
+  top: 200px;
+  width: 40%;
+  height: 20%;
+  background-color: rgba(9, 7, 7, 0.988);
+  color: white;
+}/*# sourceMappingURL=Form.css.map */

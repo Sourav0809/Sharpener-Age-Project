@@ -1,0 +1,22 @@
+.list-container{
+    width: 80%;
+    margin: auto;
+    border: 3px solid rgb(31, 31, 90);
+    
+}
+
+
+.list{
+    display: flex;
+    padding:  7px 2px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(166, 166, 207);
+
+    
+}
+
+.items{
+    font-size:20px ;
+    padding: 0px 20px;
+}
